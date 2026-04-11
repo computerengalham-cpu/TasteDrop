@@ -1,0 +1,14 @@
+.card {
+    background-color: var(--card-bg) !important;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    color: var(--text-main) !important;
+}
+
+.card-text {
+    color: var(--text-main) !important;
+    opacity: 0.8;
+}

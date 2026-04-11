@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold"><i class="fa-solid fa-utensils text-warning me-2"></i>Explore Menu</h2>
+  </div>
+
+  <div class="d-flex flex-wrap gap-2 mb-5 justify-content-center">
+    <button *ngFor="let cat of categories" 
+            (click)="filterByCategory(cat)"
+            [class.btn-warning]="selectedCategory === cat"
+            [class.btn-outline-dark]="selectedCategory !== cat"
+            class="btn rounded-pill px-4 fw-bold shadow-sm border-2">
+      {{ cat }}
+    </button>
+  </div>
+
+  <div class="row g-4 mb-5"> 
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of filteredMenu">
+      <app-menu-item [item]="item" (addToCart)="addToCart($event)"></app-menu-item>
+    </div>
+  </div>
+</div>
