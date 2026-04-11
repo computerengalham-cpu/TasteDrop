@@ -1,0 +1,135 @@
+/* 1. Global Variables  */
+:root {
+  /* Light Mode Colors */
+  --primary-color: #ffc107;        
+  --secondary-color: #ff9800;      
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --footer-bg: linear-gradient(135deg, #111, #1c1c1c);
+  --hero-overlay: rgba(0, 0, 0, 0.6);
+  --transition-speed: 0.3s;
+}
+
+/* 2. Dark Mode Overrides */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #252525;
+  --primary-color: #ffc107;        
+}
+
+/* 3. Base Styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; 
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* 4. Hero Section */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--hero-overlay);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 5. Cards & Components */
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-radius: 15px;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: var(--transition-speed);
+}
+
+body.dark .card {
+  border: 1px solid #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.bg-light {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+section h2 {
+  color: var(--primary-color);
+}
+
+/* 6. Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: var(--transition-speed);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* 7. Footer Styles */
+.footer-modern {
+  background: var(--footer-bg);
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-modern h4, 
+.footer-modern h6 {
+  color: var(--primary-color);
+}
+
+.footer-modern p {
+  font-size: 14px;
+  color: #ccc;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  background: #222;
+  padding: 10px;
+  border-radius: 50%;
+  transition: var(--transition-speed);
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: var(--primary-color);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 120px;
+  border: 0;
+  border-radius: 10px;
+}
