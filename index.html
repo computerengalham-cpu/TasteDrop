@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TasteDrop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap style-->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <!-- fontawsome style-->
+  <link rel="stylesheet" href="./css/all.min.css">
+
+  <!-- main css style -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- 🔷 Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-utensils" style="color: rgb(255, 255, 255);"></i>TasteDrop</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <!-- Cart -->
+        <a href="./cart.html" class="ms-3 position-relative text-white">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span id="cart-count" class="badge bg-danger">0</span>
+        </a>
+
+        <!-- Dark Mode -->
+        <button onclick="toggleDark()" class="theme-toggle ms-3">
+          <i id="theme-icon" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔷 Hero -->
+  <section class="hero text-white d-flex align-items-center">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Order Fresh, Eat Happy</h1>
+      <p class="lead">Delicious meals delivered to your door</p>
+      <a href="#" class="btn btn-warning">Order Now</a>
+    </div>
+  </section>
+
+  <!-- 🔷 How It Works -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <h4><i class="fa-solid fa-clipboard-list" style="color: rgb(182, 181, 180);"></i> Browse Menu</h4>
+          <p>Explore our delicious dishes</p>
+        </div>
+        <div class="col-md-4">
+          <h4><i class="fa-solid fa-cart-shopping" style="color: rgb(182, 181, 180);"></i> Add to Cart</h4>
+          <p>Select your favorite meals</p>
+        </div>
+        <div class="col-md-4">
+          <h4><i class="fa-solid fa-truck-fast" style="color: rgb(182, 181, 180);"></i> Get Delivered</h4>
+          <p>Fast delivery to your home</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔷 Popular Dishes -->
+  <section class="py-5 bg-light ">
+    <div class="container">
+      <h2 class="text-center">Popular Dishes</h2>
+      <div id="dishes" class="row mt-4"></div>
+    </div>
+  </section>
+
+  <!-- 🔷 Testimonials -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <div class="stars">
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+            </div>
+            <p>"Amazing food!"</p>
+            <h6>- Ali</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <div class="stars">
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(248, 248, 181);"></i>
+            </div>
+            <p>"Fast delivery!"</p>
+            <h6>- Sara</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <div class="stars">
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+              <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+            </div>
+            <p>"Best service!"</p>
+            <h6>- Ahmed</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Footer -->
+  <!--  Footer Start -->
+
+  <footer class="footer-modern text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+
+
+        <!--  Brand -->
+        <div class="col-md-3">
+          <h4 class="fw-bold"><i class="fa-solid fa-bowl-food" style="color: rgb(255, 255, 255);"></i>TasteDrop </h4>
+          <p>Order Fresh, Eat Happy.</p>
+        </div>
+
+        <!--  Contact -->
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Contact</h6>
+          <p><i class="fa-solid fa-map-pin" style="color: rgb(255, 255, 255);"></i> Muscat, Oman</p>
+          <p><i class="fa-solid fa-phone" style="color: rgb(250, 250, 250);"></i> +968 2499 5500</p>
+          <p><i class="fa-regular fa-clock" style="color: rgb(255, 255, 255);"></i> 10 AM - 11 PM</p>
+        </div>
+
+        <!--  Map -->
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Location</h6>
+          <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Muscat%20Oman&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <!--  Social -->
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Follow Us</h6>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f" style="color: rgb(229, 229, 227);"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-light my-4">
+
+      <div class="text-center">
+        <small>© 2026 TasteDrop. All rights reserved.</small>
+      </div>
+
+    </div>
+  </footer>
+  <!--  Footer End -->
+
+
+  <!-- bootstrap js -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- fontawsome js -->
+  <script src="./js/all.min.js"></script>
+
+  <!-- main js -->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
