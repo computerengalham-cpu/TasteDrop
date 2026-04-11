@@ -1,0 +1,132 @@
+{
+"menu": [
+{
+"id": 1,
+"name": "Grilled Chicken Burger",
+"category": "Burgers",
+"price": 3.5,
+"available": true,
+"rating": 4.6,
+"description": "Juicy grilled chicken fillet with lettuce, tomato, and garlic mayo in a toasted bun."
+},
+{
+"id": 2,
+"name": "Beef Smash Burger",
+"category": "Burgers",
+"price": 4.2,
+"available": true,
+"rating": 4.8,
+"description": "Double smashed beef patties with cheddar, pickles, and special sauce."
+},
+{
+"id": 3,
+"name": "Margherita Pizza",
+"category": "Pizza",
+"price": 5.0,
+"available": true,
+"rating": 4.5,
+"description": "Classic pizza with tomato sauce, fresh mozzarella, and basil."
+},
+{
+"id": 4,
+"name": "BBQ Chicken Pizza",
+"category": "Pizza",
+"price": 6.0,
+"available": true,
+"rating": 4.7,
+"description": "Smoky BBQ base with grilled chicken, onions, and mozzarella."
+},
+{
+"id": 5,
+"name": "Lamb Kabsa",
+"category": "Main Course",
+"price": 5.5,
+"available": true,
+"rating": 4.9,
+"description": "Slow-cooked spiced lamb over fragrant basmati rice with nuts and raisins."
+},
+{
+"id": 6,
+"name": "Grilled Salmon Fillet",
+"category": "Main Course",
+"price": 7.0,
+"available": false,
+"rating": 4.7,
+"description": "Fresh Atlantic salmon grilled with lemon butter and herbs, served with vegetables."
+},
+{
+"id": 7,
+"name": "Crispy Calamari",
+"category": "Starters",
+"price": 2.8,
+"available": true,
+"rating": 4.4,
+"description": "Lightly battered squid rings served with tartare sauce."
+},
+{
+"id": 8,
+"name": "Hummus & Pita",
+"category": "Starters",
+"price": 1.8,
+"available": true,
+"rating": 4.3,
+"description": "Creamy homemade hummus drizzled with olive oil, served with warm pita."
+},
+{
+"id": 9,
+"name": "Chocolate Lava Cake",
+"category": "Desserts",
+"price": 2.5,
+"available": true,
+"rating": 4.9,
+"description": "Warm chocolate cake with a gooey molten centre, served with vanilla ice cream."
+},
+{
+"id": 10,
+"name": "Kunafa",
+"category": "Desserts",
+"price": 2.0,
+"available": true,
+"rating": 4.8,
+"description": "Traditional cheese-filled pastry soaked in sugar syrup and topped with pistachios."
+},
+{
+"id": 11,
+"name": "Fresh Mango Juice",
+"category": "Drinks",
+"price": 1.2,
+"available": true,
+"rating": 4.6,
+"description": "100% freshly squeezed mango juice with no added sugar."
+},
+{
+"id": 12,
+"name": "Sparkling Lemonade",
+"category": "Drinks",
+"price": 1.0,
+"available": true,
+"rating": 4.4,
+"description": "Refreshing lemonade with sparkling water and fresh mint."
+}
+],
+"promo_codes": [
+{
+"code": "TASTE10",
+"discount": 10,
+"type": "percentage"
+},
+{
+"code": "FREEDEL",
+"discount": 1.5,
+"type": "flat"
+}
+],
+"restaurant_info": {
+"name": "TasteDrop Kitchen",
+"address": "17 Qurum Boulevard, Muscat, Oman",
+"phone": "+968 2499 5500",
+"email": "orders@tastedrop.com",
+"deliveryHours": "Daily 11:00 AM \u2013 11:00 PM",
+"deliveryFee": 1.5
+}
+}
