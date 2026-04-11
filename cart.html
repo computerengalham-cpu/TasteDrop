@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - TasteDrop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap style-->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <!-- fontawsome style-->
+  <link rel="stylesheet" href="./css/all.min.css">
+
+  <!-- main css style -->
+  <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+
+<!--  Navbar -->
+    <!--  Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-utensils" style="color: rgb(255, 255, 255);"></i>TasteDrop</a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+
+                <!-- Cart -->
+                <a href="./cart.html" class="ms-3 position-relative text-white">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span id="cart-count" class="badge bg-danger">0</span>
+                </a>
+
+                <!-- Dark Mode -->
+                <button onclick="toggleDark()" class="theme-toggle ms-3">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+<div class="container py-5">
+
+  <h2>Your Cart</h2>
+
+  <!--  Cart Table -->
+  <div id="cart-container"></div>
+
+  <!--  Summary -->
+  <div class="mt-4">
+    <h4>Order Summary</h4>
+    <p>Subtotal: <span id="subtotal">0</span> OMR</p>
+    <p>Delivery: 1.5 OMR</p>
+
+    <input type="text" id="promo" class="form-control w-25 mb-2" placeholder="Promo code">
+    <button onclick="applyPromo()" class="btn btn-warning btn-sm">Apply</button>
+
+    <h5>Total: <span id="total">0</span> OMR</h5>
+  </div>
+
+  <!--  Checkout Form -->
+  <form id="checkout-form" class="mt-4">
+
+    <input type="text" id="name" class="form-control mb-2" placeholder="Name" required>
+    <input type="text" id="address" class="form-control mb-2" placeholder="Address" required>
+    <input type="text" id="phone" class="form-control mb-2" placeholder="Phone" required>
+
+    <!-- Payment -->
+    <div class="mb-2">
+      <input type="radio" name="payment" value="cod" checked> Cash on Delivery
+      <input type="radio" name="payment" value="card"> Card
+    </div>
+
+    <!-- Card -->
+    <input type="text" id="card" class="form-control mb-2 d-none" placeholder="Card Number">
+
+    <button class="btn btn-success">Place Order</button>
+  </form>
+
+  <!--  Confirmation -->
+  <div id="confirmation" class="mt-4"></div>
+
+</div>
+
+ <!-- bootstrap js -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- fontawsome js -->
+  <script src="./js/all.min.js"></script>
+
+  <!-- cart js -->
+  <script src="./js/cart.js"></script>
+</body>
+</html>
