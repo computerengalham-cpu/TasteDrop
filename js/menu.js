@@ -42,6 +42,7 @@ function renderMenu(items) {
     container.innerHTML += `
       <div class="col-md-4">
         <div class="card p-3 mb-3">
+        <img src="${item.image}" class="card-img-top mb-2" style="height:250px; object-fit:cover;" alt="${item.name}">
           <h5>${item.name}</h5>
           <p>${item.description}</p>
           <span class="badge bg-primary">${item.category}</span>

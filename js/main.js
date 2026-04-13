@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dishesDiv.innerHTML += `
           <div class="col-md-3">
             <div class="card p-3 mb-3">
+            <img src="${item.image}" class="card-img-top mb-2" style="height:150px; object-fit:cover;" alt="${item.name}">
               <h5>${item.name}</h5>
               <span class="badge bg-primary">${item.category}</span>
               <p>${item.price} OMR</p>
